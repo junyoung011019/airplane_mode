@@ -7,6 +7,7 @@
 .container {
 	width:100%;
 	height:100vh;
+	background-color: white;
 	
 }
 
@@ -14,14 +15,15 @@
 	text-decoration:none;
 	color:black;
 	
-	
+}
+.container li{
+	list-style: none;
 }
 .container .Am_wrap{
-	width:80%;
+	width:68%;
 	height:40px;
 	margin:0 auto;
 	text-align:right;
-	
 	font-size: 15px;
 	
 
@@ -36,11 +38,12 @@
 	
 }
 .Am_nav{
+	width:100%;
 	margin:0 auto;
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
-
+	background-color:white;
 	padding:10px 17%;
 
 }
@@ -55,52 +58,126 @@
 	list-style:none;
 	padding-left: 0;
 }
-.Am_nav_menu li {
+.Am_nav_menu > li {
 	font-size: 20px;
 	font-weight: bold;
 	padding: 8px 40px;
+	background-color: white;
 
 }
 
-.Am_nav_menu li:hover{
-		background-color: crimson;
-		border-radius: 20px;
+.Am_nav_menu >li:hover{
+	background-color: white;
+	border-radius: 15px;
 	}
+	
+
 .nav_Btn{
 	position: absolute;
 	right:12%;
 }
 
 
-@media screen and (max-width:1150px){
-	.Am_nav{
-		flex-direction:column;
-		align-items:flex-start;
-		padding: 8px 24px;
+#check_box {
+	display: none;
+  }
+  
+  #check_box + label {
+	position: relative;
+	display: block;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	z-index: 2;
+  }
+  
+  #check_box + label > span {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 5px;
+	background: black;
+	border-radius: 5px;
+	transition: all 300ms;
+  }
+  
+  #check_box:checked + label > span:nth-child(1) {
+	top: 50%;
+	transform: translate(0, -50%);
+	transform: rotate(45deg);
+  }
+  
+  #check_box + label > span:nth-child(2) {
+	top: 50%;
+	transform: translate(0, -50%);
+  }
+  
+  #check_box:checked + label > span:nth-child(2) {
+	opacity: 0;
+  }
+  
+  #check_box + label > span:nth-child(3) {
+	bottom: 0;
+  }
+  
+  #check_box:checked + label > span:nth-child(3) {
+	top: 50%;
+	transform: translate(0, -50%);
+	transform: rotate(-45deg);
+  }
+  
+  #side_menu {
+	position: absolute;
+	margin-top:5.5%;
+	top:0;
+	width: 100%;
+	height: 65%;
+	background-color: tomato;
+	left: -100%;
+	transition: all 300ms;
+	z-index: 1;
+	padding: 60px 20px 20px 20px;
+	box-sizing: border-box;
+	border-top: solid 3px black;
+  }
+  
+  #check_box:checked + label + #side_menu {
+	left:0;
+  }
+  
+  @media screen and (max-width: 1500px) {
+	.Am_wrap {
+		display: none;
 	}
-	.Am_nav_menu{
-
+	.Am_nav .Am_nav_logo {
+		position: fixed;
+		height: 5%;
 		flex-direction: column;
-		align-items: center;
-		width:100%;
+		align-items: flex-start;
 	}
-	.Am_nav_menu li {
-		width:100%;
-		text-align:center;
+	.Am_nav_menu {
+		display: none;
 	}
-
-	.Am_nav_menu.active {
-		display:flex;
+	#check_box + label {
+		position: relative;
+		left:100%;
+		display: block;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		z-index: 2;
 	}
-	.Am_wrap{
-		display:none;
+	#side_menu {
+		position: fixed;
+		margin-top: 10%;
+		width: 100%;
+		height: 70%;
 	}
-	.nav_Btn{
-		position: absolute;
-		right:20px;
-	}
-
 }
+
+	
+	
+
 
 
 
