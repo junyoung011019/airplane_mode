@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인페이지</title>
     <link rel="stylesheet"
-			  href="AirplaneMode.css">
+			  href="AirplaneMode_login.css">
               <script src ="AiplaneMode.js"></script>
 </head>
 <body>
@@ -29,9 +29,8 @@
              <ul class ="Am_nav_menu">
                  <li><a href ="#">예 약</a></li>
                  <li><a href ="#">서비스</a></li>
-                   <li><a href ="#">혜 택</a></li>
+                 <li><a href ="#">혜 택</a></li>
                  <li><a href ="#">고객지원</a></li>
-                 
              </ul>
            
             <input type="checkbox" id="check_box" />
@@ -49,23 +48,35 @@
             </div>
         </nav>
         
-            <hr class='hr-top'/>
-            <nav class = "Am_top_menu">
-                <li><a href="#">Home</a></li>
-                <p>  |  </p>
-                <li><a href="#">Login</a></li>
-            </nav>
-            <hr class='hr-top'/>
-    </div>
-    
-    
-    
-    
-       
+        <hr class='hr-top'/>
+          <nav class = "Am_top_menu">
+              <li><a href="#">Home</a></li>
+              <p>  |  </p>
+              <li><a href="#">Login</a></li>
+          </nav>
+        <hr class='hr-top'/>
         
-    
-        
-        
+        <div class="AM_login_top">
+          <section>
+            <div class="login-wrapper">
+              <h1>Login</h1>
+              <form method="post" action="서버의url" id="login-form">
+                <button type="button" class="logintype-btn"><a href="#">회원 로그인</a></button>
+                <button type="button" class="logintype-btn"><a href="#">비회원 로그인</a></button>
+                <input type="text" name="userName" placeholder="아이디">
+                <input type="password" name="userPassword" placeholder="비밀번호">
+                <label for="remember-check">
+                  <input type="checkbox" id="remember-check">아이디 저장
+                </label>
+                <button type="submit" class="login-btn">Login</button>
+                <button type="submit" class="signup-btn">회원가입</button>
+              </form>
+            </div>
+          </section>
+        </div>
+  </div>
+ 
+          
 
 </body>
 </html>
