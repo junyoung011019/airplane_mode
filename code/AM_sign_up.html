@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+    <link rel="stylesheet"
+			  href="AM_sign_up.css">
+              <script src ="AiplaneMode.js"></script>
+</head>
+<body>
+	<div class ="container">
+		
+	
+        <div class = "Am_wrap">
+                <a href="#" class="button">로그인</a>
+                <a href="#" class="button">회원가입</a> 
+                <a href="#" class="button">예약확인</a>
+                <a href="#" class="button">고객센터</a>
+        </div>
+            
+        <nav class = "Am_nav">
+                  
+            <div class ="Am_nav_logo">
+               <a href ="#">Airplane Mode</a>
+            </div> 
+
+             
+             <ul class ="Am_nav_menu">
+                 <li><a href ="#">예 약</a></li>
+                 <li><a href ="#">서비스</a></li>
+                 <li><a href ="#">혜 택</a></li>
+                 <li><a href ="#">고객지원</a></li>
+             </ul>
+           
+            <input type="checkbox" id="check_box" />
+            <label for="check_box">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <div id="side_menu">
+              <ul>
+                <li><a href="#">예약</a></li>
+                <li><a href="#">예약</a></li>
+                <li><a href="#">예약</a></li>
+              </ul>
+            </div>
+        </nav>
+        
+        <hr class='hr-top'/>
+          <nav class = "Am_top_menu">
+              <li><a href="#">Home</a></li>
+              <p>  |  </p>
+              <li><a href="#">회원가입</a></li>
+          </nav>
+        <hr class='hr-top'/>
+            <div class="signup-wrapper">
+                <h1>회원가입</h1>
+                <section class="signup-info">
+                    <form name="signup" action="index.html" method="post" id="signup-form">
+                        아이디<br>
+                        <input type="text" name="user_ID" placeholder="아이디 입력" ><br>
+                        비밀번호<br> 
+                        <input type="password" name="user_PW1" value=""><br>
+                        비밀번호 재확인<br> 
+                        <input type="password" name="user_PW2" value=""><br>
+                        이름<br>  
+                        <input type="text" name="user_name" value=""> <br>
+                        국가<br>
+                        <select name="nationality">  
+                            <option value="">-- 선택 --</option>
+                            <option value="1">대한민국</option>
+                        </select><br>
+                        <input type="submit" name="submit" value="회원가입">
+                    </form>
+                </section>
+            </div>
+        
+        
+  </div>
+ 
+          
+
+</body>
+</html>
